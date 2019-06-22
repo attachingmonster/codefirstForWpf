@@ -7,6 +7,84 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <Grid Name="LoginFrame">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="86*"></ColumnDefinition>
+                <ColumnDefinition Width="213*"></ColumnDefinition>
+                <ColumnDefinition Width="97*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="210*"></RowDefinition>
+                <RowDefinition Height="110*"></RowDefinition>
+                <RowDefinition Height="99*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <ComboBox x:Name="cbxUserName" Grid.Column="1" Margin="105,10,81,64" IsEditable="True" SelectionChanged="ComboBox_SelectionChanged" FontSize="25" Grid.Row="1"  />
+            <PasswordBox x:Name="tbxPassword" Grid.Column="1" Margin="105,54,81,20" Grid.Row="1"   FontSize="25" />
+            <Image Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3" Margin="0,-28,0,33" Source="images/QQ1.jpg"/>
+            <Button Grid.Column="2" Grid.Row="0" Margin="83,0,57,155" Background="Transparent" BorderBrush="{x:Null}" Click="MinButton_Click"/>
+            <Image Margin="133,71,128,10" Grid.Column="1" RenderTransformOrigin="10,10" Stretch="Fill" Source="images/touxiang.jpg" >
+                <Image.Clip>
+                    <RectangleGeometry  RadiusX="150" RadiusY="150" Rect="50,50,50,50" />
+                </Image.Clip>
+            </Image>
+            <Button Grid.Column="2" Grid.Row="0" Margin="137,0,0,155" Background="Transparent" BorderBrush="{x:Null}" Click="ExitButton_Click"/>
+            <Image Grid.Column="1" Margin="55,11,329,66" Grid.Row="1" Source="images/QQ2.jpg"/>
+            <Image RenderTransformOrigin="1.43,0.761" Grid.Column="1" Margin="55,52,329,21" Grid.Row="1">
+                <Image.Source>
+                    <BitmapImage UriSource="images/pass.jpg"/>
+                </Image.Source>
+            </Image>
+            <CheckBox Grid.Column="1" Margin="55,0,289,70" Grid.Row="2" RenderTransformOrigin="0.5,0.5" FontSize="15" Content="自动登录"/>
+            <CheckBox Grid.Column="1" Margin="164,0,164,70" Grid.Row="2" RenderTransformOrigin="0.5,0.5" FontSize="15" Content="记住密码"/>
+            <Button Grid.Column="1" Margin="267,103,81,74" Grid.Row="1" RenderTransformOrigin="0.5,0.5" Background="White" BorderBrush="{x:Null}" FontSize="15" Content="修改密码" Grid.RowSpan="2" Click="ModifyButton_Click"/>
+            <Button x:Name="btnRegister" Margin="0,65,102,0" Grid.Row="2" Background="White" BorderBrush="{x:Null}" Content="注册帐号" Click="Register_Click" FontSize="15"/>
+            <Button x:Name="btnLogin" Grid.Column="1" Grid.Row="2" FontSize="20" Content="登录" Background="DeepSkyBlue" BorderBrush="{x:Null}" Margin="55,36,81,20" Click="Login_Click"/>
+            <Image Grid.Column="2" Margin="137,36,0,0" Grid.Row="2" Source="images/erweima.jpg"/>
+            <Button x:Name="btn_Erweima" Grid.Column="2" Margin="137,40,0,-4" Grid.Row="2" RenderTransformOrigin="0.5,0.5" Background="Transparent" BorderBrush="{x:Null}" Click="Erweima_Click" HorizontalAlignment="Left" Width="57"/>
+
+            <Image x:Name="img_Ewm" Margin="10,0,27,-4" Grid.ColumnSpan="3" Grid.RowSpan="3" Height="423" VerticalAlignment="Bottom" Visibility="Hidden" Source="images/QQ3.jpg"/>
+            <Button Name="Show" Margin="25,11,80,64" Grid.Column="2" Grid.Row="1" Background="Transparent" BorderBrush="{x:Null}" FontSize="20" Click="Show_Click" Content="显示信息"></Button>
+            <Button x:Name="Delete" Margin="25,54,80,21" Grid.Column="2" Grid.Row="1" Background="Transparent" BorderBrush="{x:Null}" FontSize="20" Click="Delete_Click" Content="删除账号"/>
+        </Grid>
+        <Grid Name="DialogFrame" Margin="-2,10,2,-10" Background="White" Visibility="Collapsed">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="635*"></ColumnDefinition>
+                <ColumnDefinition Width="123*"></ColumnDefinition>
+                <ColumnDefinition Width="34"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="29*"></RowDefinition>
+                <RowDefinition Height="276*"></RowDefinition>
+                <RowDefinition Height="114*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Button Margin="0,117,108,111" Grid.Row="1" BorderBrush="{x:Null}" Background="Transparent" RenderTransformOrigin="11.151,0.984" Grid.Column="1"/>
+            <TextBox Grid.Column="0" Grid.Row="0" Background="DeepSkyBlue" FontSize="20" HorizontalContentAlignment="Center" Text="你的好友"/>
+            <Image Grid.ColumnSpan="3" Margin="381,0,-219,0" Source="images/QQ 3.jpg"/>
+            <Image Margin="0,247,0,0" Grid.Row="1" Source="images/QQ 4.jpg"/>
+            <Image Margin="321,117,-164,111" Grid.Row="1" RenderTransformOrigin="0.593,-1.238" Grid.ColumnSpan="3" Source="images/QQ 5.jpg"/>
+            <Button Margin="0,247,606,0" Grid.Row="1" BorderBrush="{x:Null}" Background="Transparent">
+                <Button BorderBrush="{x:Null}" Background="Transparent" Height="29" Width="29" RenderTransformOrigin="3.602,0.318"/>
+            </Button>
+            <Button Margin="29,247,577,0" Grid.Row="1" BorderBrush="{x:Null}" Background="Transparent"/>
+            <Button Margin="63,247,538,0" Grid.Row="1" BorderBrush="{x:Null}" Background="Transparent"/>
+            <Button Margin="97,247,511,0" Grid.Row="1" BorderBrush="{x:Null}" Background="Transparent"/>
+            <Button Margin="124,247,482,0" Grid.Row="1" BorderBrush="{x:Null}" Background="Transparent" RenderTransformOrigin="3.671,0.785"/>
+            <Button Margin="158,247,448,0" Grid.Row="1" BorderBrush="{x:Null}" Background="Transparent"/>
+            <Button Margin="187,247,419,0" Grid.Row="1" BorderBrush="{x:Null}" Background="Transparent"/>
+            <Button Margin="216,247,390,0" Grid.Row="1" BorderBrush="{x:Null}" Background="Transparent"/>
+            <Button Margin="245,247,364,0" Grid.Row="1" BorderBrush="{x:Null}" Background="Transparent" RenderTransformOrigin="1.728,0.507"/>
+            <Button Margin="271,247,336,0" Grid.Row="1" BorderBrush="{x:Null}" Background="Transparent"/>
+            <Button Margin="304,247,311,0" Grid.Row="1" BorderBrush="{x:Null}" Background="Transparent" RenderTransformOrigin="11.151,0.984"/>
+            <Button Margin="606,247,0,0" Grid.Row="1" BorderBrush="{x:Null}" Background="Transparent"/>
+            <TextBox Grid.Row="2" Margin="0,0,0,10" BorderBrush="{x:Null}" TextChanged="TextBox_TextChanged"/>
+            <Button Margin="415,72,145,22" Grid.Row="2" RenderTransformOrigin="0.392,0.401" Content="关闭(C)" Click="Exit_Click"/>
+            <Button Margin="528,72,32,22" Grid.Row="2" RenderTransformOrigin="0.392,0.401" Content="发送(S)" Click="Sending_Click"/>
+            <Button Margin="55,0,43,0" Grid.Column="1" BorderBrush="{x:Null}" Background="Transparent" Click="Min_Click"/>
+            <Button Margin="80,0,0,0" Grid.Column="1" BorderBrush="{x:Null}" Background="Transparent" HorizontalAlignment="Left" Width="20" Click="Max_Click"/>
+            <Button Margin="100,0,0,0" Grid.Column="1" BorderBrush="{x:Null}" Background="Transparent" Click="Exit0_Click"/>
+            <Button Margin="36,0,73,0" Grid.Column="1" BorderBrush="{x:Null}" Background="Transparent"/>
+            <Button Margin="0,0,88,0" Grid.Column="1" BorderBrush="{x:Null}" Background="Transparent" RenderTransformOrigin="-1.818,0.435"/>
+            <Button x:Name="yinchang" Margin="0,107,99,99" Grid.Row="1" BorderBrush="{x:Null}" Background="Transparent" RenderTransformOrigin="11.151,0.984" Grid.Column="1" Click="Spread_Click"/>
+        </Grid>
     </Grid>
 </Window>
